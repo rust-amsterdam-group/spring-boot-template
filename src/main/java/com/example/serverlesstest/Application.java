@@ -1,9 +1,11 @@
 package com.example.serverlesstest;
 
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,9 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class Application {
 
+	@Async("asyncExecutor")
 	@RequestMapping("/")
-	public String helloWorld() {
-		return "Hello World!";
+	public CompletableFuture<String> helloWorld() {
+		return CompletableFuture.completedFuture("Hello World!");
 	}
 
 	public static void main(String[] args) {
