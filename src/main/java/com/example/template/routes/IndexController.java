@@ -1,4 +1,4 @@
-package com.example.serverlesstest.routes;
+package com.example.template.routes;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;

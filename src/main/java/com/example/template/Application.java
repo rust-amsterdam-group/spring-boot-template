@@ -1,4 +1,4 @@
-package com.example.serverlesstest;
+package com.example.template;
 
 import java.util.Map;
 import org.apache.logging.log4j.util.Strings;
