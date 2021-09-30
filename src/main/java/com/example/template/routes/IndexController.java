@@ -11,6 +11,6 @@ public class IndexController {
   @GetMapping("/")
   @ResponseStatus(HttpStatus.OK)
   public String helloWorld() {
-    return "Hello World!";
+    return "Hello, world!";
   }
 }
